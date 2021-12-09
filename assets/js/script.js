@@ -1,5 +1,6 @@
 console.log("Hello World!")
 
+
 // Displays the current time //
 var timeDisplay = $("#currentDay");
 function displayTime() {
@@ -8,8 +9,11 @@ function displayTime() {
 }
 
 
-
 // Time Block //
+
+
+// Time Block Color //
+
 
 displayTime();
 setInterval(displayTime, 1000)
