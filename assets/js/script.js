@@ -10,9 +10,22 @@ function displayTime() {
 
 
 // Time Block //
+var currentHour = moment().hour();
+console.log(currentHour);
+var timeBlock = $('textarea');
+for (var i = 0; i < timeBlock.length; i++) {
+    if (timeBlock[i] < currentHour) {
+      $(timeBlock[i]).addClass('past');
+  } else if (timeBlock[i] === currentHour) {
+      $(timeBlock[i]).addClass('present');
+    } else {
+      $(timeBlock[i]).addClass('future')
+    }
+  };
+
+// Save Button //
 
 
-// Time Block Color //
 
 
 displayTime();
