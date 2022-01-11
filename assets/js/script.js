@@ -8,15 +8,17 @@ function displayTime() {
     timeDisplay.text(rightNow);
 }
 
+displayTime();
+setInterval(displayTime, 1000)
 
 // Time Block //
 var currentHour = moment().hour();
 console.log(currentHour);
 var timeBlock = $('textarea');
 for (var i = 0; i < timeBlock.length; i++) {
-    if (timeBlock[i] < currentHour) {
+    if (timeBlock[i].id < currentHour) {
       $(timeBlock[i]).addClass('past');
-  } else if (timeBlock[i] === currentHour) {
+  } else if (timeBlock[i].id == currentHour) {
       $(timeBlock[i]).addClass('present');
     } else {
       $(timeBlock[i]).addClass('future')
@@ -25,8 +27,3 @@ for (var i = 0; i < timeBlock.length; i++) {
 
 // Save Button //
 
-
-
-
-displayTime();
-setInterval(displayTime, 1000)
