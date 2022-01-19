@@ -25,5 +25,21 @@ for (var i = 0; i < timeBlock.length; i++) {
     }
   };
 
-// Save Button //
 
+// Local Storage //
+
+$(".saveBtn").on("click", function() {
+  var id = $(this).attr("id");
+  var description = $(this).siblings(".description").val();
+  localStorage.setItem(id, description);
+});
+
+$("#9").val(localStorage.getItem("9-btn"))
+$("#10").val(localStorage.getItem("10-btn"))
+$("#11").val(localStorage.getItem("11-btn"))
+$("#12").val(localStorage.getItem("12-btn"))
+$("#13").val(localStorage.getItem("13-btn"))
+$("#14").val(localStorage.getItem("14-btn"))
+$("#15").val(localStorage.getItem("15-btn"))
+$("#16").val(localStorage.getItem("16-btn"))
+$("#17").val(localStorage.getItem("17-btn"))
